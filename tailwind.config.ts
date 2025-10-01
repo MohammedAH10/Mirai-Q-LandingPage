@@ -86,12 +86,12 @@ export default {
         },
         "glow-pulse": {
           "0%, 100%": { 
-            filter: "drop-shadow(0 0 20px hsl(var(--glow) / 0.4)) drop-shadow(0 0 40px hsl(var(--glow) / 0.2))",
+            filter: "drop-shadow(0 0 15px hsl(var(--glow) / 0.3)) drop-shadow(0 0 30px hsl(var(--glow) / 0.15))",
             transform: "scale(1)"
           },
           "50%": { 
-            filter: "drop-shadow(0 0 40px hsl(var(--glow-intense) / 0.6)) drop-shadow(0 0 80px hsl(var(--glow-intense) / 0.3))",
-            transform: "scale(1.05)"
+            filter: "drop-shadow(0 0 25px hsl(var(--glow-intense) / 0.4)) drop-shadow(0 0 50px hsl(var(--glow-intense) / 0.2))",
+            transform: "scale(1.02)"
           }
         },
         "float": {
@@ -109,7 +109,7 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "fade-in-up": "fade-in-up 0.8s ease-out",
         "scale-in": "scale-in 0.5s ease-out",
-        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 8s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
         "shimmer": "shimmer 3s linear infinite"
       },
