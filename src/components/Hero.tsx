@@ -36,7 +36,7 @@ export const Hero = () => {
               <img 
                 src={miraiQLogo} 
                 alt="Mirai-Q Logo" 
-                className="w-64 h-64 md:w-80 md:h-80 object-contain animate-glow-pulse hover:scale-110 transition-transform duration-500"
+                className="w-64 h-64 md:w-80 md:h-80 object-contain hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_25px_rgba(47,150,216,0.4)]"
               />
             </div>
           </div>
