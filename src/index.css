@@ -2,53 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 270 35% 8%;
-
-    --card: 0 0% 98%;
-    --card-foreground: 270 35% 8%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 270 35% 8%;
-
+    --background: 222 47% 11%;
+    --foreground: 210 40% 96%;
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 96%;
+    --popover: 222 47% 14%;
+    --popover-foreground: 210 40% 96%;
     --primary: 203 68% 52%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 270 35% 8%;
-
-    --muted: 0 0% 92%;
-    --muted-foreground: 270 35% 40%;
-
+    --secondary: 222 47% 18%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 222 47% 18%;
+    --muted-foreground: 215 20% 65%;
     --accent: 203 68% 52%;
     --accent-foreground: 0 0% 100%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 90%;
-    --input: 0 0% 98%;
+    --border: 222 47% 20%;
+    --input: 222 47% 16%;
     --ring: 203 68% 52%;
-
     --radius: 0.75rem;
-
     --glow: 203 68% 52%;
     --glow-intense: 203 80% 60%;
-    
-    --gradient-primary: linear-gradient(135deg, hsl(270 35% 8%) 0%, hsl(270 30% 12%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(203 68% 52%) 0%, hsl(203 80% 60%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(270 35% 8%) 0%, hsl(270 30% 15%) 50%, hsl(270 35% 8%) 100%);
+  }
+}
 
-    --shadow-glow: 0 0 40px hsl(var(--glow) / 0.3), 0 0 80px hsl(var(--glow) / 0.15);
-    --shadow-glow-intense: 0 0 60px hsl(var(--glow-intense) / 0.5), 0 0 120px hsl(var(--glow-intense) / 0.25);
-    
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+@layer components {
+  .glass {
+    background: hsl(222 47% 14% / 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(222 47% 20% / 0.5);
+  }
+  .glass-strong {
+    background: hsl(222 47% 14% / 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid hsl(222 47% 24% / 0.5);
+  }
+  .logo-glow {
+    position: relative;
+    display: inline-flex;
+  }
+  .logo-glow::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140%;
+    height: 70%;
+    background: linear-gradient(to top, hsl(203 68% 52% / 0.5), transparent);
+    border-radius: 50%;
+    filter: blur(30px);
+    pointer-events: none;
   }
 }
 
@@ -56,7 +65,6 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
   }
